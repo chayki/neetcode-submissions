@@ -19,7 +19,7 @@ public class Solution {
 
         for (int i = start; i < candidates.Length; ++i)
         {
-            if (i > start &&candidates[i] == candidates[i-1]) continue; // ignore duplicate twin element, since this results in duplicate sets in the result. 
+            if (i > start && candidates[i] == candidates[i-1]) continue; // ignore duplicate twin element, since this results in duplicate sets in the result. 
             if (prefixSum + candidates[i] > target) break;
             prefix.Add(candidates[i]);
             CombinationSum2DFS(candidates, i+1, target, prefix, prefixSum+candidates[i], result);
